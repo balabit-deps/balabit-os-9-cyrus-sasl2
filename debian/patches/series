@@ -27,3 +27,6 @@
 0034-CVE-2019-19906.patch
 0035-CVE-2019-19906.patch
 CVE-2022-24407.patch
+0034-channel-binding-gssapi-gss-spnego.patch
+0035-Add-support-for-setting-max-ssf-0-to-GSS-SPNEGO-1.patch
+0035-Add-support-for-setting-max-ssf-0-to-GSS-SPNEGO-2.patch

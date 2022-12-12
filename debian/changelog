@@ -1,3 +1,29 @@
+cyrus-sasl2 (2.1.27+dfsg2-3ubuntu1.2) jammy; urgency=medium
+
+  * d/control, d/libsasl2-modules-gssapi-mit.install,
+    d/libsasl2-modules.install: move the SCRAM mechanism to
+    the libsasl2-modules package (LP: #1988730)
+
+ -- Andreas Hasenack <andreas@canonical.com>  Mon, 12 Dec 2022 08:52:45 -0300
+
+cyrus-sasl2 (2.1.27+dfsg2-3ubuntu1.1) jammy; urgency=medium
+
+  * Add SASL channel binding support for GSSAPI and GSS-SPNEGO
+    (LP: #1912256):
+    - d/p/0034-channel-binding-gssapi-gss-spnego.patch: add SASL channel
+      binding support for GSSAPI and GSS-SPNEGO
+    - d/p/0035-Add-support-for-setting-max-ssf-0-to-GSS-SPNEGO-1.patch:
+      allow setting maxssf to 0 when using GSS-SPNEGO inside SSL/TLS
+    - d/p/0035-Add-support-for-setting-max-ssf-0-to-GSS-SPNEGO-2.patch:
+      be more conformant to RFC4752
+  * Add some DEP8 tests (LP: #1677781):
+    - d/t/{control,saslauthd}: saslauthd tests with multiple mechanisms
+    - d/t/{control,gssapi}: test for SASL GSSAPI using OpenLDAP
+    - d/t/{control,pluginviewer}: test available mechanisms
+    - d/t/{control,shared-secret-mechs}: test shared secret mechanisms
+
+ -- Lena Voytek <lena.voytek@canonical.com>  Wed, 19 Oct 2022 14:06:40 -0700
+
 cyrus-sasl2 (2.1.27+dfsg2-3ubuntu1) jammy; urgency=medium
 
   * SECURITY UPDATE: SQL injection in SQL plugin
